@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '../../../../../../vite.svg'
-import './App.css'
+import { ThemeProvider } from 'styled-components'
 
+import { defaultTheme } from '../src/styles/theme/default'
+import { GlobalStyle } from '../src/styles/global'
 export function App() {
   return (
-    <>
+    <ThemeProvider theme={defaultTheme}>
       <div>
+        <GlobalStyle />
+
         <p>Hello world</p>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
