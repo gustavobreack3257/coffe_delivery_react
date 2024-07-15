@@ -1,7 +1,8 @@
 import {
   CoffeeIconContainer,
-  IntroductionSubTitle,
   IntroductionTitle,
+  IntroductionSubTitle,
+  IntroductionHeader,
   MarketingContainer,
   PackageIconContainer,
   ShoppingCartIconContainer,
@@ -10,40 +11,56 @@ import {
   PackageIcon,
   TimerIcon,
   CoffeeIcon,
+  IntroductionContainer,
+  IntroductionContent,
 } from './styles'
+
+import BackgroundContentCoffee from '../../../../assets/Background.svg'
+import CoffeeSVG from '../../../../assets/IntroductionCoffee.svg'
 
 export function IntroductionCoffee() {
   return (
-    <aside>
-      <IntroductionTitle>
-        Encontre o café perfeito para qualquer hora do dia
-      </IntroductionTitle>
+    <IntroductionContainer>
+      <img src={BackgroundContentCoffee} alt="" />
 
-      <IntroductionSubTitle>
-        Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora
-      </IntroductionSubTitle>
+      <IntroductionContent>
+        <IntroductionHeader>
+          <IntroductionTitle>
+            Encontre o café perfeito para qualquer hora do dia
+          </IntroductionTitle>
 
-      <MarketingContainer>
-        <ShoppingCartIconContainer>
-          <ShoppingCartIcon weight="fill" />
-        </ShoppingCartIconContainer>
-        <p>Compra simples e segura</p>
+          <IntroductionSubTitle>
+            Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
+            hora
+          </IntroductionSubTitle>
 
-        <PackageIconContainer>
-          <PackageIcon weight="fill" />
-        </PackageIconContainer>
-        <p>Embalagem mantém o café intacto</p>
+          <MarketingContainer>
+            <ShoppingCartIconContainer>
+              <ShoppingCartIcon weight="fill" />
+            </ShoppingCartIconContainer>
+            <p>Compra simples e segura</p>
 
-        <TimerIconContainer>
-          <TimerIcon />
-        </TimerIconContainer>
-        <p>Entrega rápida e rastreada</p>
+            <PackageIconContainer>
+              <PackageIcon weight="fill" />
+            </PackageIconContainer>
+            <p>Embalagem mantém o café intacto</p>
 
-        <CoffeeIconContainer>
-          <CoffeeIcon />
-        </CoffeeIconContainer>
-        <p>O café chega fresquinho até você</p>
-      </MarketingContainer>
-    </aside>
+            <TimerIconContainer>
+              <TimerIcon />
+            </TimerIconContainer>
+            <p>Entrega rápida e rastreada</p>
+
+            <CoffeeIconContainer>
+              <CoffeeIcon />
+            </CoffeeIconContainer>
+            <p>O café chega fresquinho até você</p>
+          </MarketingContainer>
+        </IntroductionHeader>
+
+        <div>
+          <img src={CoffeeSVG} alt="" />
+        </div>
+      </IntroductionContent>
+    </IntroductionContainer>
   )
 }

@@ -1,7 +1,33 @@
 import { ShoppingCart, Package, Timer, Coffee } from '@phosphor-icons/react'
 import styled from 'styled-components'
 
-export const IntroductionTitle = styled.p`
+export const IntroductionContainer = styled.div`
+  height: 34rem;
+  width: 90rem;
+
+  img {
+    overflow: hidden;
+    position: absolute;
+  }
+`
+
+export const IntroductionContent = styled.aside`
+  display: grid;
+  grid-template-columns: 36.75rem 1fr;
+  gap: 3.5rem;
+  margin: 5.75rem 10rem;
+  align-items: flex-start;
+`
+
+export const IntroductionHeader = styled.div`
+  height: 12rem;
+  width: 36.75rem;
+
+  display: flex;
+  flex-direction: column;
+`
+
+export const IntroductionTitle = styled.span`
   font-family: 'Baloo 2';
   font-size: 3rem;
   font-weight: 800;
@@ -9,6 +35,7 @@ export const IntroductionTitle = styled.p`
 
   color: ${(props) => props.theme['base-title']};
 `
+
 export const IntroductionSubTitle = styled.p`
   font-size: 1.25rem;
   line-height: 130%;
@@ -16,8 +43,9 @@ export const IntroductionSubTitle = styled.p`
   margin-top: 1rem;
   color: ${(props) => props.theme['base-subtitle']};
 `
+
 export const MarketingContainer = styled.div`
-  width: 35.25rem;
+  width: 35.5rem;
   height: 5.25rem;
 
   display: flex;
