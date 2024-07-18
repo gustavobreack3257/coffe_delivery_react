@@ -18,4 +18,31 @@ export const defaultTheme = {
 
   background: '#FAFAFA',
   white: '#FFFFFF',
+
+  FONT_FAMILY: {
+    ROBOTO: 'Roboto',
+    Baloo_2: 'Baloo 2',
+  },
+  FONT_WEIGHT: {
+    REGULAR: 400,
+    BOLD: 700,
+    EXTRA_BOLD: 800,
+  },
+
+  FONT_SIZE: {
+    TITLE_XL: 48,
+    TITLE_L: 32,
+    TITLE_M: 24,
+    TITLE_S: 20,
+    TITLE_XS: 18,
+
+    TEXT_L: 20,
+    TEXT_M: 16,
+    TEXT_S: 14,
+    TEXT_XS: 12,
+
+    TAG: 10,
+    BUTTON_G: 14,
+    BUTTON_M: 12,
+  },
 }
