@@ -13,7 +13,6 @@ export const CatalogContainer = styled.main`
   gap: 2.5rem;
 
   padding: 2rem 10rem 0;
-  background: red;
 
   strong {
     font-weight: bold;

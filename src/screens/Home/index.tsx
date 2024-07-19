@@ -1,4 +1,4 @@
-import { ProductCard } from '../../components/ProductCard'
+import { ProductCard } from './components/ProductCard'
 import { IntroductionCoffee } from './components/IntroductionCoffee'
 
 import { CatalogContainer, HomeContainer } from './styles'
