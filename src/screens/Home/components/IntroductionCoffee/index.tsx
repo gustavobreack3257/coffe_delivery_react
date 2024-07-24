@@ -1,48 +1,58 @@
-import {
-  CoffeeIconContainer,
-  IntroductionTitle,
-  IntroductionSubTitle,
-  IntroductionHeader,
-  MarketingContainer,
-  PackageIconContainer,
-  ShoppingCartIconContainer,
-  ShoppingCartIcon,
-  TimerIconContainer,
-  PackageIcon,
-  TimerIcon,
-  CoffeeIcon,
-  IntroductionContainer,
-  IntroductionContent,
-} from './styles'
+import * as S from './styles'
+
+import { ShoppingCart, Package, Timer, Coffee } from '@phosphor-icons/react'
 
 import BackgroundContentCoffee from '../../../../assets/Background.svg'
 import CoffeeSVG from '../../../../assets/IntroductionCoffee.svg'
 
 export function IntroductionCoffee() {
   return (
-    <IntroductionContainer>
+    <S.IntroductionContainer>
       <img src={BackgroundContentCoffee} alt="" />
 
-      <IntroductionContent>
-        <IntroductionHeader>
-          <IntroductionTitle>
+      <S.IntroductionContent>
+        <S.IntroductionHeader>
+          <S.IntroductionTitle>
             Encontre o café perfeito para qualquer hora do dia
-          </IntroductionTitle>
+          </S.IntroductionTitle>
 
-          <IntroductionSubTitle>
+          <S.IntroductionSubTitle>
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
             hora
-          </IntroductionSubTitle>
+          </S.IntroductionSubTitle>
 
-          <MarketingContainer>
-            <ShoppingCartIconContainer>
-              <ShoppingCartIcon weight="fill" />
-            </ShoppingCartIconContainer>
-            <p>Compra simples e segura</p>
+          <S.MarketingContainer>
+            <S.MarketingContentContainer>
+              <S.IconContainer bgIconColor="yellowDark">
+                <ShoppingCart weight="fill" color="#FAFAFA" />
+              </S.IconContainer>
+              <p>Compra simples e segura</p>
+            </S.MarketingContentContainer>
 
-            <PackageIconContainer>
+            <S.MarketingContentContainer>
+              <S.IconContainer bgIconColor="baseGray">
+                <Package weight="fill" color="#FAFAFA" />
+              </S.IconContainer>
+              <p>Compra simples e segura</p>
+            </S.MarketingContentContainer>
+
+            <S.MarketingContentContainer>
+              <S.IconContainer bgIconColor="yellow">
+                <Timer weight="fill" color="#FAFAFA" />
+              </S.IconContainer>
+              <p>Compra simples e segura</p>
+            </S.MarketingContentContainer>
+
+            <S.MarketingContentContainer>
+              <S.IconContainer bgIconColor="purple">
+                <Coffee weight="fill" color="#FAFAFA" />
+              </S.IconContainer>
+              <p>Compra simples e segura</p>
+            </S.MarketingContentContainer>
+
+            {/* <PackageS.IconContainer>
               <PackageIcon weight="fill" />
-            </PackageIconContainer>
+            </PackageS.IconContainer>
             <p>Embalagem mantém o café intacto</p>
 
             <TimerIconContainer>
@@ -54,13 +64,14 @@ export function IntroductionCoffee() {
               <CoffeeIcon />
             </CoffeeIconContainer>
             <p>O café chega fresquinho até você</p>
-          </MarketingContainer>
-        </IntroductionHeader>
+            */}
+          </S.MarketingContainer>
+        </S.IntroductionHeader>
 
         <div>
           <img src={CoffeeSVG} alt="" />
         </div>
-      </IntroductionContent>
-    </IntroductionContainer>
+      </S.IntroductionContent>
+    </S.IntroductionContainer>
   )
 }

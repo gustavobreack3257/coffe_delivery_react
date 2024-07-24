@@ -1,18 +1,32 @@
 import { ProductCard } from './components/ProductCard'
 import { IntroductionCoffee } from './components/IntroductionCoffee'
 
-import { CatalogContainer, HomeContainer } from './styles'
+import * as S from './styles'
 
 export function Home() {
   return (
-    <HomeContainer>
+    <S.HomeContainer>
       <IntroductionCoffee />
 
-      <CatalogContainer>
+      <S.CatalogContainer>
         <strong>Nossos cafés</strong>
 
-        <ProductCard />
-      </CatalogContainer>
-    </HomeContainer>
+        <S.ProductContainer>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </S.ProductContainer>
+      </S.CatalogContainer>
+    </S.HomeContainer>
   )
 }

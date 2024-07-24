@@ -39,7 +39,7 @@ export const CountButtonBase = styled.button`
   color: ${(props) => props.theme.purple};
   background-color: transparent;
 
-  :hover {
+  &:hover {
     color: ${(props) => props.theme['purple-dark']};
   }
 `

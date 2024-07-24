@@ -1,8 +1,8 @@
 import {
   PriceAndQuantityContainer,
   ProductContainer,
-  Shopping,
-  ShoppingContainer,
+  ShoppingButton,
+  ShoppingIcon,
 } from './styles'
 
 import { ProductQuantitySelector } from '../../../../components/ProductQuantitySelector'
@@ -27,9 +27,9 @@ export function ProductCard() {
 
         <ProductQuantitySelector />
 
-        <ShoppingContainer>
-          <Shopping weight="fill" />
-        </ShoppingContainer>
+        <ShoppingButton>
+          <ShoppingIcon weight="fill" />
+        </ShoppingButton>
       </PriceAndQuantityContainer>
     </ProductContainer>
   )

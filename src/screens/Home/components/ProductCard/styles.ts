@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { ShoppingCart } from '@phosphor-icons/react'
 export const ProductContainer = styled.div`
   height: 19.5rem;
-  width: 16rem;
+  width: 256px;
 
   display: flex;
   flex-direction: column;
@@ -64,14 +64,15 @@ export const ProductContainer = styled.div`
 
 export const PriceAndQuantityContainer = styled.div`
   height: 2.5rem;
-  width: 14rem;
+  width: 16rem;
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   margin-top: 2.125rem;
-  padding: 0 0.5rem;
+  padding: 0 1.25rem;
 
   span {
     height: 1.9375rem;
@@ -97,26 +98,25 @@ export const PriceAndQuantityContainer = styled.div`
     `}
   }
 `
-export const ShoppingContainer = styled.button`
+
+export const ShoppingButton = styled.button`
   height: 2.375rem;
   width: 2.375rem;
 
   display: flex;
-
   justify-content: center;
   align-items: center;
-  border-radius: 0.375rem;
-  border: 0;
+  border-radius: 0.5rem;
+  border-width: 0;
 
   background-color: ${(props) => props.theme['purple-dark']};
 
-  :hover {
-    display: flex;
-    flex: 1;
+  &:hover {
     background-color: ${(props) => props.theme.purple};
   }
 `
-export const Shopping = styled(ShoppingCart)`
+
+export const ShoppingIcon = styled(ShoppingCart)`
   size: 22;
 
   color: ${(props) => props.theme['base-card']};
