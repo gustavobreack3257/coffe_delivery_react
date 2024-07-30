@@ -49,22 +49,6 @@ export function IntroductionCoffee() {
               </S.IconContainer>
               <p>Compra simples e segura</p>
             </S.MarketingContentContainer>
-
-            {/* <PackageS.IconContainer>
-              <PackageIcon weight="fill" />
-            </PackageS.IconContainer>
-            <p>Embalagem mantém o café intacto</p>
-
-            <TimerIconContainer>
-              <TimerIcon />
-            </TimerIconContainer>
-            <p>Entrega rápida e rastreada</p>
-
-            <CoffeeIconContainer>
-              <CoffeeIcon />
-            </CoffeeIconContainer>
-            <p>O café chega fresquinho até você</p>
-            */}
           </S.MarketingContainer>
         </S.IntroductionHeader>
 
