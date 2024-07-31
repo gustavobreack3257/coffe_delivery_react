@@ -1,4 +1,5 @@
-import { SelectedOrderForm } from './components/SelectedOrderForm'
+import { FormAddress } from './components/FormAddress'
+
 import * as S from './styles'
 
 export function Payment() {
@@ -10,7 +11,19 @@ export function Payment() {
         <S.Title>Cafés selecionados</S.Title>
       </S.SectionSubTitleContainer>
 
-      <SelectedOrderForm />
+      <S.FormsContainer>
+        <S.SelectedOrderFormAndPaymentMethodContainer>
+          <FormAddress />
+
+          <S.FormOfPaymentContainer>
+            <p>ddfdfsdvfs</p>
+          </S.FormOfPaymentContainer>
+        </S.SelectedOrderFormAndPaymentMethodContainer>
+
+        <S.ConfirmationFormContainer>
+          <p>ytftf</p>
+        </S.ConfirmationFormContainer>
+      </S.FormsContainer>
     </S.PaymentContainer>
   )
 }
