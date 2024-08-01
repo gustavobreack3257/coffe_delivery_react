@@ -15,7 +15,24 @@ export function FormAddress() {
       </S.LocationContainer>
 
       <S.FormDataInputContainer>
-        <S.CepDataInput />
+        <S.CepDataInput placeholder="Cep" />
+        <S.StreetDataInput placeholder="Rua" />
+
+        <S.NumberDataInputAndComplementContainer>
+          <S.NumberDataInput placeholder="Numero" />
+
+          <S.Alternative>
+            <S.ComplementDataInput placeholder="Complemento" />
+
+            <p>Opcional</p>
+          </S.Alternative>
+        </S.NumberDataInputAndComplementContainer>
+
+        <S.NeighborhoodContainer>
+          <S.NeighborhoodDataInput placeholder="Bairro" />
+          <S.CityDataInput placeholder="Cidade" />
+          <S.UFDataInput placeholder="UF" />
+        </S.NeighborhoodContainer>
       </S.FormDataInputContainer>
     </S.FormAddressContainer>
   )

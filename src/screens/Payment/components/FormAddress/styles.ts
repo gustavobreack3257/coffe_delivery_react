@@ -21,8 +21,6 @@ export const LocationContainer = styled.header`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-
-  background-color: yellow;
 `
 
 export const FormHeaderText = styled.header`
@@ -62,24 +60,103 @@ export const FormDataInputContainer = styled.main`
 
   display: flex;
   flex-direction: column;
-  gap: 1rem 0.75rem;
-
-  background-color: aquamarine;
+  gap: 1rem 0;
 `
 
 export const BaseInputData = styled.input`
+  height: 2.625rem;
+
   border-radius: 0.25rem;
   padding: 0.75rem;
   ${({ theme }) => css`
     font-family: ${theme.FONT_FAMILY.ROBOTO};
     font-size: ${theme.FONT_SIZE.TEXT_S}px;
     font-weight: ${theme.FONT_WEIGHT.REGULAR};
-    border: 1px solid ${theme['base-button']};
+    color: ${theme['base-text']};
 
+    border: 1px solid ${theme['base-button']};
     background-color: ${theme['base-input']};
+
+    &:focus {
+      box-shadow: none;
+      border-color: ${(props) => props.theme['yellow-dark']};
+    }
+    &::placeholder {
+      color: ${(props) => props.theme['base-label']};
+    }
   `}
 `
 export const CepDataInput = styled(BaseInputData)`
-  height: 2.625rem;
   width: 12.5rem;
+`
+export const StreetDataInput = styled(BaseInputData)`
+  width: 35rem;
+`
+
+export const NumberDataInputAndComplementContainer = styled.div`
+  height: 2.625rem;
+
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+`
+export const NumberDataInput = styled(BaseInputData)`
+  width: 12.5rem;
+
+  margin-right: 0.75rem;
+`
+
+export const Alternative = styled.div`
+  height: 2.625rem;
+
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 0.75rem;
+  border-radius: 0.25rem;
+
+  ${({ theme }) => css`
+    border: 1px solid ${theme['base-button']};
+    background-color: ${theme['base-input']};
+  `}
+
+  p {
+    font-style: italic;
+    ${({ theme }) => css`
+      font-family: ${theme.FONT_FAMILY.ROBOTO};
+      font-weight: ${theme.FONT_WEIGHT.REGULAR};
+      font-size: ${theme.FONT_SIZE.TEXT_XS}px;
+
+      color: ${theme['base-label']};
+    `}
+  }
+`
+
+export const ComplementDataInput = styled(BaseInputData)`
+  width: 300px;
+
+  border: 0;
+`
+
+export const NeighborhoodContainer = styled.div`
+  height: 2.625rem;
+
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 0.75rem;
+`
+
+export const NeighborhoodDataInput = styled(BaseInputData)`
+  width: 12.5rem;
+`
+export const CityDataInput = styled(BaseInputData)`
+  width: 19.25rem;
+`
+
+export const UFDataInput = styled(BaseInputData)`
+  width: 3.75rem;
 `
