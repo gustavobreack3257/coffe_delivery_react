@@ -26,11 +26,6 @@ export const BaseOrderForm = styled.aside`
   background-color: ${(props) => props.theme['base-card']};
 `
 
-export const FormOfPaymentContainer = styled(BaseOrderForm)`
-  height: 12.9375rem;
-  width: 40rem;
-`
-
 export const ConfirmationFormContainer = styled(BaseOrderForm)`
   height: 31.125rem;
   width: 28rem;

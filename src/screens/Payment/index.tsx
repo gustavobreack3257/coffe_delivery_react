@@ -1,4 +1,5 @@
 import { FormAddress } from './components/FormAddress'
+import { PaymentMethodSelection } from './components/PaymentMethodSelection'
 
 import * as S from './styles'
 
@@ -15,9 +16,7 @@ export function Payment() {
         <S.SelectedOrderFormAndPaymentMethodContainer>
           <FormAddress />
 
-          <S.FormOfPaymentContainer>
-            <p>ddfdfsdvfs</p>
-          </S.FormOfPaymentContainer>
+          <PaymentMethodSelection />
         </S.SelectedOrderFormAndPaymentMethodContainer>
 
         <S.ConfirmationFormContainer>
