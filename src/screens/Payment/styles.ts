@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const FormsContainer = styled.main`
   height: 37rem;
@@ -9,13 +9,15 @@ export const FormsContainer = styled.main`
   gap: 2rem;
 `
 
-export const SelectedOrderFormAndPaymentMethodContainer = styled.div`
+export const PaymentMethodAndAddressFormsContainer = styled.div`
   height: 37rem;
   width: 40rem;
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  background-color: red;
 `
 export const BaseOrderForm = styled.aside`
   display: flex;
@@ -40,24 +42,6 @@ export const PaymentContainer = styled.div`
   flex: 1;
   gap: 1rem;
   padding: 2.5rem 10rem;
-`
-
-export const SectionSubTitleContainer = styled.strong`
-  height: 1.5rem;
-  width: auto;
-
-  display: flex;
-  gap: 31.25rem;
-`
-export const Title = styled.strong`
-  height: 1.4375rem;
-  width: 10.625rem;
-
-  ${({ theme }) => css`
-    size: ${theme.FONT_SIZE.TITLE_XS};
-    font-weight: ${theme.FONT_WEIGHT.BOLD};
-    color: ${theme['base-subtitle']};
-  `}
 `
 
 export const DesignLine = styled.div`

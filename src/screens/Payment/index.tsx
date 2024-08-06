@@ -1,5 +1,6 @@
 import { CoffeeCard } from './components/CoffeeCard'
 import { FormAddress } from './components/FormAddress'
+import { FormTitles } from './components/FormTitles'
 import { PaymentMethodSelection } from './components/PaymentMethodSelection'
 
 import * as S from './styles'
@@ -7,18 +8,13 @@ import * as S from './styles'
 export function Payment() {
   return (
     <S.PaymentContainer>
-      <S.SectionSubTitleContainer>
-        <S.Title>Complete seu pedido</S.Title>
-
-        <S.Title>Cafés selecionados</S.Title>
-      </S.SectionSubTitleContainer>
-
+      <FormTitles />
       <S.FormsContainer>
-        <S.SelectedOrderFormAndPaymentMethodContainer>
+        <S.PaymentMethodAndAddressFormsContainer>
           <FormAddress />
 
           <PaymentMethodSelection />
-        </S.SelectedOrderFormAndPaymentMethodContainer>
+        </S.PaymentMethodAndAddressFormsContainer>
 
         <S.ConfirmationFormContainer>
           <CoffeeCard />
