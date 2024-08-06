@@ -1,3 +1,4 @@
+import { CoffeeCard } from './components/CoffeeCard'
 import { FormAddress } from './components/FormAddress'
 import { PaymentMethodSelection } from './components/PaymentMethodSelection'
 
@@ -20,7 +21,11 @@ export function Payment() {
         </S.SelectedOrderFormAndPaymentMethodContainer>
 
         <S.ConfirmationFormContainer>
-          <p>ytftf</p>
+          <CoffeeCard />
+          <S.DesignLine />
+
+          <CoffeeCard />
+          <S.DesignLine />
         </S.ConfirmationFormContainer>
       </S.FormsContainer>
     </S.PaymentContainer>

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const SelectorButtonContainer = styled.div`
-  height: 2.5rem;
+  height: 2.375rem;
   width: 4.5rem;
 
   display: flex;
