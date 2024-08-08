@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const CoffeeCardContainer = styled.span`
+export const CoffeeCardContainer = styled.aside`
   height: 6.5rem;
 
   display: flex;
