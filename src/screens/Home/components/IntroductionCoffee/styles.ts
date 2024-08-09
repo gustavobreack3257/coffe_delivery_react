@@ -62,10 +62,6 @@ export const MarketingContentContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  p {
-    flex: 1;
-  }
 `
 
 const BG_ICONS_COLOR = {
