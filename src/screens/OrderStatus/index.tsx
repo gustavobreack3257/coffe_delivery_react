@@ -21,7 +21,7 @@ export function OrderStatus() {
                 </S.IconContainer>
 
                 <p>
-                  Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                  Entrega em <strong>Rua João Daniel Martinelli, 102</strong>{' '}
                   Farrapos - Porto Alegre, RS
                 </p>
               </S.IconContentContainer>
@@ -34,8 +34,7 @@ export function OrderStatus() {
                 </S.IconContainer>
 
                 <p>
-                  Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
-                  Farrapos - Porto Alegre, RS
+                  Previsão de entrega <strong>20 min - 30 min</strong>
                 </p>
               </S.IconContentContainer>
             </S.IconsInfoContainer>
@@ -47,8 +46,7 @@ export function OrderStatus() {
                 </S.IconContainer>
 
                 <p>
-                  Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
-                  Farrapos - Porto Alegre, RS
+                  Pagamento na entrega <strong>Cartão de Crédito</strong>
                 </p>
               </S.IconContentContainer>
             </S.IconsInfoContainer>
