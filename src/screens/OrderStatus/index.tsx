@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 import Illustration from '../../assets/Illustration.svg'
-import { MapPin, Timer, CurrencyDollar } from '@phosphor-icons/react'
+import { IconInfo } from '../../components/IconInfo'
 export function OrderStatus() {
   return (
     <S.OrderStatusContainer>
@@ -15,40 +15,9 @@ export function OrderStatus() {
 
           <S.OrderInfo>
             <S.IconsInfoContainer>
-              <S.IconContentContainer>
-                <S.IconContainer bgIconColor="purple">
-                  <MapPin weight="fill" />
-                </S.IconContainer>
-
-                <p>
-                  Entrega em <strong>Rua João Daniel Martinelli, 102</strong>{' '}
-                  Farrapos - Porto Alegre, RS
-                </p>
-              </S.IconContentContainer>
-            </S.IconsInfoContainer>
-
-            <S.IconsInfoContainer>
-              <S.IconContentContainer>
-                <S.IconContainer bgIconColor="yellow">
-                  <Timer weight="fill" />
-                </S.IconContainer>
-
-                <p>
-                  Previsão de entrega <strong>20 min - 30 min</strong>
-                </p>
-              </S.IconContentContainer>
-            </S.IconsInfoContainer>
-
-            <S.IconsInfoContainer>
-              <S.IconContentContainer>
-                <S.IconContainer bgIconColor="yellowDark">
-                  <CurrencyDollar weight="fill" />
-                </S.IconContainer>
-
-                <p>
-                  Pagamento na entrega <strong>Cartão de Crédito</strong>
-                </p>
-              </S.IconContentContainer>
+              <IconInfo iconType="MAPPIN" combinedText />
+              <IconInfo iconType="TIMER" combinedText />
+              <IconInfo iconType="CURRENCYDOLLAR" combinedText />
             </S.IconsInfoContainer>
           </S.OrderInfo>
         </S.OrderInfoContainer>
