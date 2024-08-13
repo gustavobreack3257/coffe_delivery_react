@@ -1,9 +1,8 @@
 import * as S from './styles'
 
-import { ShoppingCart, Package, Timer, Coffee } from '@phosphor-icons/react'
-
 import BackgroundContentCoffee from '../../../../assets/Background.svg'
 import CoffeeSVG from '../../../../assets/IntroductionCoffee.svg'
+import { IconInfo } from '../../../../components/IconInfo'
 
 export function IntroductionCoffee() {
   return (
@@ -23,31 +22,21 @@ export function IntroductionCoffee() {
 
           <S.MarketingContainer>
             <S.MarketingContentContainer>
-              <S.IconContainer bgIconColor="yellowDark">
-                <ShoppingCart weight="fill" color="#FAFAFA" />
-              </S.IconContainer>
-              <p>Compra simples e segura</p>
+              <IconInfo iconType="SHOPPING" text="Compra simples e segura" />
+              <IconInfo
+                iconType="PACKAGE"
+                text="Embalagem mantém o café intacto"
+              />
             </S.MarketingContentContainer>
+          </S.MarketingContainer>
 
+          <S.MarketingContainer>
             <S.MarketingContentContainer>
-              <S.IconContainer bgIconColor="baseGray">
-                <Package weight="fill" color="#FAFAFA" />
-              </S.IconContainer>
-              <p>Compra simples e segura</p>
-            </S.MarketingContentContainer>
-
-            <S.MarketingContentContainer>
-              <S.IconContainer bgIconColor="yellow">
-                <Timer weight="fill" color="#FAFAFA" />
-              </S.IconContainer>
-              <p>Compra simples e segura</p>
-            </S.MarketingContentContainer>
-
-            <S.MarketingContentContainer>
-              <S.IconContainer bgIconColor="purple">
-                <Coffee weight="fill" color="#FAFAFA" />
-              </S.IconContainer>
-              <p>Compra simples e segura</p>
+              <IconInfo iconType="TIMER" text="Entrega rápida e rastreada" />
+              <IconInfo
+                iconType="COFFEE"
+                text="O café chega fresquinho até você"
+              />
             </S.MarketingContentContainer>
           </S.MarketingContainer>
         </S.IntroductionHeader>

@@ -40,6 +40,7 @@ export const IntroductionSubTitle = styled.p`
   line-height: 130%;
 
   margin-top: 1rem;
+  margin-bottom: 4.125rem;
   color: ${(props) => props.theme['base-subtitle']};
 `
 
@@ -48,20 +49,14 @@ export const MarketingContainer = styled.div`
   height: 5.25rem;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  margin-top: 4rem;
-  gap: 0.75rem;
 `
 
 export const MarketingContentContainer = styled.div`
-  gap: 0.75rem;
-  flex-basis: 48%;
+  height: 2.5rem;
+
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex: 1;
+  flex-direction: row;
 `
 
 const BG_ICONS_COLOR = {

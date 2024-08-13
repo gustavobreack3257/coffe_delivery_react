@@ -8,10 +8,14 @@ interface iconTypeProps {
     | 'TIMER'
     | 'COFFEE'
     | 'CURRENCYDOLLAR'
-  combinedText: boolean
+  combinedText?: boolean
   text?: string
 }
-export function IconInfo({ iconType, combinedText, text }: iconTypeProps) {
+export function IconInfo({
+  iconType,
+  combinedText = false,
+  text,
+}: iconTypeProps) {
   return (
     <S.IconInfoContainer>
       <S.IconContainer
@@ -24,7 +28,9 @@ export function IconInfo({ iconType, combinedText, text }: iconTypeProps) {
                 ? 'yellow'
                 : iconType === 'PACKAGE'
                   ? 'baseGray'
-                  : 'yellowDark'
+                  : iconType === 'COFFEE'
+                    ? 'purple'
+                    : 'yellowDark'
         }
       >
         {iconType === 'MAPPIN' ? (
