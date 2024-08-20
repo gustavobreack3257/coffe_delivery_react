@@ -6,23 +6,58 @@ import {
 } from './styles'
 
 import { ProductQuantitySelector } from '../../../../components/ProductQuantitySelector'
+import { formatMoney } from '../../../../utils/formatMoney'
+import { useCart } from '../../../../hooks/useCart'
+import { useState } from 'react'
 
-import ExpressoCoffee from '../../../../assets/Expresso.svg'
+export interface Coffee {
+  id: number
+  tags: string[]
+  name: string
+  description: string
+  photo: string
+  price: number
+}
 
-export function ProductCard() {
+interface CoffeeProps {
+  coffee: Coffee
+}
+
+export function ProductCard({ coffee }: CoffeeProps) {
+  const [quantity, setQuantity] = useState(1)
+
+  function handleIncrease() {
+    setQuantity((state) => state + 1)
+  }
+
+  function handleDecrease() {
+    setQuantity((state) => state - 1)
+  }
+
+  const { addCoffeeToCart } = useCart()
+
+  function handleAddToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity,
+    }
+    addCoffeeToCart(coffeeToAdd)
+  }
+
+  const formattedPrice = formatMoney(coffee.price)
   return (
-    <ProductContainer>
-      <img src={ExpressoCoffee} alt="Imagem do produto" />
+    <ProductContainer id={id}>
+      <img src={image} alt="Imagem do produto" />
 
-      <h5>Tradicional</h5>
+      <h5>{category}</h5>
 
-      <h3>Expresso Tradicional</h3>
+      <h3>{title}</h3>
 
-      <p>O tradicional café feito com água quente e grãos moídos</p>
+      <p>{description}</p>
 
       <PriceAndQuantityContainer>
         <span>
-          R$ <strong>9,99</strong>
+          R$ <strong>{price}</strong>
         </span>
 
         <ProductQuantitySelector />

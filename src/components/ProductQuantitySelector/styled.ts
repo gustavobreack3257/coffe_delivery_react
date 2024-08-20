@@ -7,6 +7,7 @@ export const SelectorButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.25rem;
+
   border-radius: 0.375rem;
   border-width: 0;
 
