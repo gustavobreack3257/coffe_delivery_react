@@ -45,24 +45,33 @@ export function ProductCard({ coffee }: CoffeeProps) {
   }
 
   const formattedPrice = formatMoney(coffee.price)
+
   return (
-    <ProductContainer id={id}>
-      <img src={image} alt="Imagem do produto" />
+    <ProductContainer>
+      <img src={`/coffees/${coffee.photo}`} alt="Imagem do produto" />
 
-      <h5>{category}</h5>
+      <h5>
+        {coffee.tags.map((tag) => (
+          <span key={`${coffee.id}${tag}`}>{tag}</span>
+        ))}
+      </h5>
 
-      <h3>{title}</h3>
+      <h3>{coffee.name}</h3>
 
-      <p>{description}</p>
+      <p>{coffee.description}</p>
 
       <PriceAndQuantityContainer>
         <span>
-          R$ <strong>{price}</strong>
+          R$ <strong>{formattedPrice}</strong>
         </span>
 
-        <ProductQuantitySelector />
+        <ProductQuantitySelector
+          coffeeAdded={handleIncrease}
+          coffeeSubtracted={handleDecrease}
+          amountOfCoffee={quantity}
+        />
 
-        <ShoppingButton>
+        <ShoppingButton onClick={handleAddToCart}>
           <ShoppingIcon weight="fill" />
         </ShoppingButton>
       </PriceAndQuantityContainer>

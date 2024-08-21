@@ -35,10 +35,35 @@ export const MapPinStyledContainer = styled(BaseIconsStyled)`
 
 export const ShoppingCartStyledContainer = styled(BaseIconsStyled)`
   width: 2.5rem;
+
+  display: flex;
+  justify-content: space-between;
   background-color: ${(props) => props.theme['yellow-light']};
 
   &:hover {
     background-color: ${(props) => props.theme.yellow};
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    width: 1.25rem;
+    height: 1.25rem;
+
+    border-radius: 50%;
+    margin-top: calc(-1.5rem / 2);
+    margin-right: calc(-1.5rem /);
+
+    color: ${({ theme }) => theme.white};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    background-color: ${({ theme }) => theme['yellow-dark']};
   }
 `
 export const ShoppingCartStyled = styled(ShoppingCart)`

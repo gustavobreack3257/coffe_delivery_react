@@ -2,7 +2,7 @@ import {
   MinusContainer,
   PlusContainer,
   SelectorButtonContainer,
-} from './styled'
+} from './styles'
 
 import { Minus, Plus } from '@phosphor-icons/react'
 
@@ -19,11 +19,11 @@ export function ProductQuantitySelector({
 }: CoffeeAmount) {
   return (
     <SelectorButtonContainer>
-      <MinusContainer onClick={coffeeSubtracted}>
+      <MinusContainer onClick={coffeeSubtracted} disabled={amountOfCoffee <= 1}>
         <Minus size={14} weight="bold" />
       </MinusContainer>
 
-      <p>{amountOfCoffee}</p>
+      <input type="number" readOnly value={amountOfCoffee} />
 
       <PlusContainer onClick={coffeeAdded}>
         <Plus size={14} weight="bold" />

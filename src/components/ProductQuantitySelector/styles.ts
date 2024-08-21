@@ -16,13 +16,18 @@ export const SelectorButtonContainer = styled.div`
 
   background-color: ${(props) => props.theme['base-button']};
 
-  p {
+  input {
     height: 1.5rem;
-    width: 1.25rem;
+    width: 1.5rem;
+
+    text-align: center;
+    background: none;
+    border: none;
+    color: ${({ theme }) => theme['base-title']};
 
     ${({ theme }) => css`
       font-family: ${theme.FONT_FAMILY.ROBOTO};
-      font-size: ${theme.FONT_SIZE.TEXT_M};
+      font-size: ${theme.FONT_SIZE.TEXT_M}px;
       font-weight: ${theme.FONT_WEIGHT.REGULAR};
     `}
   }
